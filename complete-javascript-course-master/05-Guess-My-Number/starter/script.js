@@ -18,10 +18,10 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No number!';
   } else if (number < guess) {
-    document.querySelector('.message').textContent = '☝ Higer...';
+    document.querySelector('.message').textContent = '☝ too high...';
     document.querySelector('.score').textContent = --score;
   } else if (number > guess) {
-    document.querySelector('.message').textContent = '👇 Lower...';
+    document.querySelector('.message').textContent = '👇 too low...';
     document.querySelector('.score').textContent = --score;
   } else {
     document.querySelector('.message').textContent = '👍 You got it!';
