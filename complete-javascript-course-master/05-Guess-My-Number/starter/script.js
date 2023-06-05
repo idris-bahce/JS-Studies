@@ -36,6 +36,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else {
     document.querySelector('.message').textContent = '👍 You got it!';
     document.querySelector('.number').textContent = number;
+    document.querySelector('.number').style.width = '30rem';
     document.querySelector('body').style.backgroundColor = 'green';
     if (document.querySelector('.highscore').textContent < score) {
       document.querySelector('.highscore').textContent = score;
