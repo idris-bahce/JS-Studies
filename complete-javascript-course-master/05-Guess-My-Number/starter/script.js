@@ -11,7 +11,6 @@ console.log(document.querySelector('.guess').value);
 
 var number = Math.floor(Math.random() * 20) + 1;
 var score = document.querySelector('.score').textContent;
-console.log(number);
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
