@@ -14,19 +14,12 @@ var score = document.querySelector('.score').textContent;
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
-  if (!guess) {
+  if (!guess || guess < 0) {
     document.querySelector('.message').textContent = '⛔ No number!';
-  } else if (number < guess) {
+  } else if (guess !== number) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '☝ too high...';
-      document.querySelector('.score').textContent = --score;
-    } else {
-      document.querySelector('.message').textContent = 'Game over!';
-      document.querySelector('.score').textContent = 0;
-    }
-  } else if (number > guess) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '👇 too low...';
+      document.querySelector('.message').textContent =
+        number < guess ? '☝ too high...' : '👇 too low...';
       document.querySelector('.score').textContent = --score;
     } else {
       document.querySelector('.message').textContent = 'Game over!';
