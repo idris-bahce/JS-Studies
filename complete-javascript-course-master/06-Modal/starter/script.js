@@ -11,7 +11,6 @@ function closeModal() {
 }
 
 function openModal() {
-  console.log('button clicked');
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 }
@@ -20,3 +19,7 @@ for (let i = 0; i < btnOpenModal.length; i++) {
 }
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function () {
+  console.log('key pressed');
+});
