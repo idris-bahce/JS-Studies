@@ -7,7 +7,15 @@ var currentScore1 = 0;
 var currentScore2 = 0;
 var player1Score = 0;
 var player2Score = 0;
-function changePlayer() {}
+function changePlayer() {
+  if (player1) {
+    document.querySelector('.player--0').classList.remove('player--active');
+    document.querySelector('.player--1').classList.add('player--active');
+  } else {
+    document.querySelector('.player--1').classList.remove('player--active');
+    document.querySelector('.player--0').classList.add('player--active');
+  }
+}
 function setCurrentScore0() {
   currentScore1 = 0;
   currentScore2 = 0;
@@ -38,6 +46,7 @@ rollDiceButton.addEventListener('click', function () {
       document.querySelector('#current--1').textContent = currentScore2;
     }
   } else {
+    changePlayer();
     setCurrentScore0();
     player1 = !player1;
   }
@@ -55,6 +64,7 @@ holdButton.addEventListener('click', function () {
     player2Score += currentScore2;
     document.querySelector('#score--1').textContent = player2Score;
   }
+  changePlayer();
   setCurrentScore0();
   player1 = !player1;
 });
