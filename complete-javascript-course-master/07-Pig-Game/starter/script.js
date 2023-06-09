@@ -7,6 +7,7 @@ var currentScore1 = 0;
 var currentScore2 = 0;
 var player1Score = 0;
 var player2Score = 0;
+function changePlayer() {}
 function setCurrentScore0() {
   currentScore1 = 0;
   currentScore2 = 0;
