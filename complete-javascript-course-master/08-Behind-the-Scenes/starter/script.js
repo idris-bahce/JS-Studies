@@ -2,7 +2,11 @@
 
 function calcAge(birthYear) {
   const age = 2023 - birthYear;
-  console.log(firtName);
+
+  function printAge() {
+    const output = `${firtName}, you are ${age}, born in ${birthYear}`;
+    console.log(output);
+  }
   return age;
 }
 
